@@ -1,8 +1,9 @@
+img {
+	max-width: 50%;
+	 border-radius: 3px;
+	 opacity: 0.8;
 
-
-
-
-
+}
 
 /* top header section */
 .header-top {
@@ -107,7 +108,8 @@
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/brandon-griggs-82205-unsplash.jpg");
-  height: 50%;
+  background-color: gray;
+  height: 48%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,4 +127,31 @@
 
 .main-menu li a:hover {
 	color: #00457b;
+}
+
+
+
+.contact-info-warp {
+	background: #00457b;
+	padding: 30px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+
+.site-btn {
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 16px;
+	letter-spacing: 2px;
+	border-radius: 3px;
+	min-width: 170px;
+	text-align: center;
+	background: #00457b;
+	cursor: pointer;
+	border: none;
+	color: #fff;
 }

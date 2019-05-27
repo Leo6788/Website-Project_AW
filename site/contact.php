@@ -51,14 +51,9 @@
 					<div class="col-lg-6 text-lg-right header-top-right">
 						<div class="top-social">
 							<a href=""><i class="fa fa-facebook"></i></a>
-							<!-- <a href=""><i class="fa fa-twitter"></i></a> -->
-							<!-- <a href=""><i class="fa fa-instagram"></i></a> -->
-							<!-- <a href=""><i class="fa fa-pinterest"></i></a> -->
 							<a href=""><i class="fa fa-linkedin"></i></a>
 						</div>
 						<div class="user-panel">
-							<!-- <a href=""><i class="fa fa-user-circle-o"></i> Register</a> -->
-							<!-- <a href=""><i class="fa fa-sign-in"></i> Login</a> -->
 						</div>
 					</div>
 				</div>
@@ -73,12 +68,8 @@
 							<i class="fa fa-bars"></i>
 						</div>
 						<ul class="main-menu">
-							<li><a href="index.html">Home</a></li>
-							<!--<li><a href="categories.html">FEATURED LISTING</a></li> -->
-							<!-- <li><a href="about.html">ABOUT US</a></li> -->
-							<!-- <li><a href="single-list.html">Pages</a></li> -->
-							<!-- <li><a href="blog.html">Blog</a></li> -->
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -107,7 +98,6 @@
 	<!-- page -->
 	<section class="page-section blog-page">
 		<div class="container">
-			<!-- <div id="map-canvas"></div> -->
 			<div class="contact-info-warp">
 				<p><i class="fa fa-map-marker"></i>109 Pound Street, Grafton</p>
 				<p><i class="fa fa-envelope"></i>allison@fngrafton.com.au</p>
@@ -124,75 +114,45 @@
 							<h3>Get in touch</h3>
 							<p>Browse houses and flats for sale and to rent in your area</p>
 						</div>
-<!----------------------------------------------------------------------------------------- contact form-------------------------------------------------------------->	
-						<form class="contact-form" action="contact.php" method="post">
+						<form class="contact-form" action="contactform.php" method="post">
 							<div class="row">
 								<div class="col-md-6">
-									<input type="text" placeholder="Frist Name">
+									<input type="text" name="fristname" placeholder="Frist Name" required="yes">
 								</div>
 								<div class="col-md-6">
-									<input type="text" placeholder="Last Name">
+									<input type="text" name="lastname" placeholder="Last Name" required="yes">
 								</div>
 								<div class="col-md-6">
-									<input type="text" placeholder="Phone Number">
+									<input type="text" name="phonenumber" placeholder="contact number" required="yes">
 								</div>
 								<div class="col-md-6">
-									<input type="text" placeholder=" email">
+									<input type="text" name="email" placeholder="Email" required="yes">
 								</div>
 								<div class="col-md-12">
-									<textarea  placeholder=" message"></textarea>
-									<button class="site-btn">SUMMIT NOW</button>
+									<textarea name="subject"  placeholder="subject" required="yes"></textarea>
+								</div>
+								<div class="col-md-12">
+									<textarea name="message"  placeholder="message" required="yes"></textarea>
+								</div>
+								<div class="col-md-12">
+									<input type="text" name="quiz" placeholder="Test for human: What is Homer Simson's Son's first name?" required="yes">
+								</div>
+								<div class="col-md-6">
+									<button class="site-btn" type="submit" name="submit">Send Email</button>
 								</div>
 							</div>
-						</form>
-
-<!----------------------------------------------------------------------------------------- Contact form end -------------------------------------------------------------->	
-
+						</form>	
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- page end -->
-
-
-	<!-- Clients section -->
-	<!-- <div class="clients-section">
-		<div class="container">
-			<div class="clients-slider owl-carousel">
-				<a href="#">
-					<img src="img/partner/1.png" alt="">
-				</a>
-				<a href="#">
-					<img src="img/partner/2.png" alt="">
-				</a>
-				<a href="#">
-					<img src="img/partner/3.png" alt="">
-				</a>
-				<a href="#">
-					<img src="img/partner/4.png" alt="">
-				</a>
-				<a href="#">
-					<img src="img/partner/5.png" alt="">
-				</a>
-			</div>
-		</div>
-	</div> -->
-	<!-- Clients section end -->
-
-
 		<!-- Footer section -->
 	<footer class="footer-section set-bg" data-setbg="img/footerbg.png">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 footer-widget">
-
-<!----------------------------------------------------------------------------------------- logo and texted -------------------------------------------------------------->	
-					<!-- <img src="img/logo.png" alt=""> -->
-					<!-- <p>Lorem ipsum dolo sit azmet, consecter dipise consult  elit. Maecenas mamus antesme non anean a dolor sample tempor nuncest erat.</p> -->
-<!----------------------------------------------------------------------------------------- logo and texted end -------------------------------------------------------------->	
-
-<!----------------------------------------------------------------------------------------- social media links -------------------------------------------------------------->	
 					<div class="social">
 						<h5 class="fw-title">Follow US</h5>
 						<a href="https://www.facebook.com/firstnationalgrafton/"><i class="fa fa-facebook"></i></a>
@@ -201,10 +161,7 @@
 						<!-- <a href="#"><i class="fa fa-pinterest"></i></a> -->
 						<!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
 					</div> 
-<!----------------------------------------------------------------------------------------- social media links end -------------------------------------------------------------->	
 				</div>
-				
-<!----------------------------------------------------------------------------------------- contact infromation -------------------------------------------------------------->	
             <div class="col-lg-3 col-md-6 footer-widget">	
 					<div class="contact-widget">
 						<h5 class="fw-title">CONTACT US</h5>
@@ -215,65 +172,15 @@
 						<p><i class="fa fa-clock-o"></i>Mon - Fri, 08 AM - 06 PM <Br> Sat,  08 AM - 12 PM</p>
 					</div>
 				</div> 
-<!----------------------------------------------------------------------------------------- contact infromation end -------------------------------------------------------------->	
 
-
-<!----------------------------------------------------------------------------------------- popularplaces  ----------------------------------------------------------------------->	
-			<!--	<div class="col-lg-3 col-md-6 footer-widget">
-					<div class="double-menu-widget">
-						<h5 class="fw-title">POPULAR PLACES</h5>
-						<ul>
-							<li><a href="">Florida</a></li>
-							<li><a href="">New York</a></li>
-							<li><a href="">Washington</a></li>
-							<li><a href="">Los Angeles</a></li>
-							<li><a href="">Chicago</a></li>
-						</ul>
-						<ul>
-							<li><a href="">St Louis</a></li>
-							<li><a href="">Jacksonville</a></li>
-							<li><a href="">San Jose</a></li>
-							<li><a href="">San Diego</a></li>
-							<li><a href="">Houston</a></li>
-						</ul>
-					</div>
-				</div> -->
-
-<!----------------------------------------------------------------------------------------- popularplaces end -------------------------------------------------------------->
-
-
-<!----------------------------------------------------------------------------------------- newletter ---------------------------------------------------------------------->		
-				<!--<div class="col-lg-3 col-md-6  footer-widget">
-					<div class="newslatter-widget">
-						<h5 class="fw-title">NEWSLETTER</h5>
-						<p>Subscribe your email to get the latest news and new offer also discount</p>
-						<form class="footer-newslatter-form">
-							<input type="text" placeholder="Email address">
-							<button><i class="fa fa-send"></i></button>
-						</form>
-					</div>
-				</div> -->
-<!----------------------------------------------------------------------------------------- newletter end -------------------------------------------------------------->	
-
-			</div>
-
-<!----------------------------------------------------------------------------------------- bottom page links -------------------------------------------------------------->				
+			</div>				
 			<div class="footer-bottom">
 				<div class="footer-nav">
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<!-- <li><a href="">Featured Listing</a></li> -->
-						<!-- <li><a href="">About us</a></li> -->
-						<!-- <li><a href="">Pages</a></li> -->
-						<!-- <li><a href="">Blog</a></li> -->
-						<li><a href="contact.html">Contact</a></li>  
+						<li><a href="index.php">Home</a></li>
+						<li><a href="contact.php">Contact</a></li>  
 					</ul>
 				</div>
-<!----------------------------------------------------------------------------------------- bottom page links end -------------------------------------------------------------->	
-
-
-
-<!----------------------------------------------------------------------------------------- copyright  -------------------------------------------------------------->	
 				<div class="copyright">
 					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
@@ -281,7 +188,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				</div>
 			</div>
 		</div>
-<!----------------------------------------------------------------------------------------- copyright end -------------------------------------------------------------->	
 	</footer>
                                         
 	<!--====== Javascripts & Jquery ======-->

@@ -1822,6 +1822,7 @@ ol {
 	padding: 15px 20px 10px;
 }
 
+
 /*------------------
 	Responsive
 ---------------------*/
@@ -1949,7 +1950,7 @@ ol {
 		top: 135%;
 		left: 0;
 		width: 100%;
-		background: #fff;
+		background: #00457b;
 		display: none;
 		-webkit-box-shadow: 0 10px 20px 0px rgba(167, 167, 167, 0.22);
 		        box-shadow: 0 10px 20px 0px rgba(167, 167, 167, 0.22);

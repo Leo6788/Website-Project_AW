@@ -4,15 +4,14 @@ This is my project website
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+To get started frist you will need to creat a GitHub account and sigin in after that you will need to download Git Bash/ Git GUI onto your local machine.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+you will need to install Git bash/ Git GUI link to website is downblow
+https://git-scm.com/downloads 
 
-```
-Give examples
-```
+And follow the installtion guld also make sure you get the correct opertaing system download e.g windows for a windows computer
 
 ### Installing
 
@@ -32,17 +31,6 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ### And coding style tests
 
@@ -72,7 +60,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Liam Rodgers**  -(https://github.com/Leo6788)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 

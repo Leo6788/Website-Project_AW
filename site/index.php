@@ -260,235 +260,71 @@ include 'realestatedbconnect.php_l';
 
 
 <!------------------- loop featured properties ------------------->	
-	<!-- feature section -->
-	<section class="feature-section spad">
+<section class="feature-section spad">
 		<div class="container">
 			<div class="section-title text-center">
 				<h3>Featured Listings</h3>
 				<p>Browse houses and flats for sale and to rent in your area</p>
 			</div>
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<!-- feature -->
-					<div class="feature-item">
-						<div class="feature-pic set-bg" data-setbg ="img/feature/macpherson_crescent.jpg">
-							<div class="rent-notic">FOR RENT</div>
-						</div>
-						<div class="feature-text">
-							<div class="text-center feature-title">
-								<h5>1 Macpherson Crescent</h5>
-								<p><i class="fa fa-map-marker"></i> Grafton NSW 2460</p>
-							</div>
-							<div class="room-info-warp">
-								<div class="room-info">
-									<div class="rf-left">
-										<!-- <p><i class="fa fa-th-large"></i> 800 Square foot</p> -->
-										<p><i class="fa fa-bed"></i> 3 Bedrooms</p>
-									</div>
-									<div class="rf-right">
-										<p><i class="fa fa-car"></i> 1 Garages</p>
-										<p><i class="fa fa-bath"></i> 1 Bathrooms</p>
-									</div>	
-								</div>
-								<div class="room-info">
-									<div class="rf-left">
-									    <p><i class="fa fa-user"></i> Allison Whaites</p>
-									</div>
-									<div class="rf-right">
-										 <!-- <p><i class="fa fa-clock-o"></i> 1 days ago</p> -->
-									</div>	
-								</div>
-							</div>
-							<a href="http://www.fngrafton.com.au/real-estate/1258059/1-macpherson-crescent-grafton-nsw-2460" class="room-price">$460</a>
-						</div>
-					</div>
-				</div>
 
+<?php 
+$sqlsr = "SELECT * FROM `lrodgers_salerep`";
+//echo '<hr> test sql statment...' .$sql. '<br>';
+$resultsr = mysqli_query($conn, $sqlsr);
+if (mysqli_num_rows($resultsr) > 0) {
+    // output data of each row
+   $rowsr = mysqli_fetch_assoc($resultsr);   
+}
+
+
+$sql = "SELECT * FROM `lrodgers_property` WHERE `featured` = 1 AND `active` =1 ";
+//echo '<hr> test sql statment...' .$sql. '<br>';
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {   ?>
 
 
 				<div class="col-lg-4 col-md-6">
 					<!-- feature -->
 					<div class="feature-item">
-						<div class="feature-pic set-bg" data-setbg="img/feature/gosford_close.jpg">
-							<div class="sale-notic">FOR Auction</div>
-						</div>
-						<div class="feature-text">
-							<div class="text-center feature-title">
-								<h5>2/15 Gosford Close</h5>
-								<p><i class="fa fa-map-marker"></i> Grafton NSW 2460</p>
-								<p>Saturday 13 April at 1:30pm</p>
+						<div class="feature-pic set-bg" data-setbg="<?php echo $row['image'];?>
 
-							</div>
-							<div class="room-info-warp">
-								<div class="room-info">
-									<div class="rf-left">
-										<!-- <p><i class="fa fa-th-large"></i> 1500 Square foot</p> -->
-										<p><i class="fa fa-bed"></i> 3 Bedrooms</p>
-									</div>
-									<div class="rf-right">
-										<p><i class="fa fa-car"></i> 2 Garages</p>
-										<p><i class="fa fa-bath"></i> 2 Bathrooms</p>
-									</div>	
-								</div>
-								<div class="room-info">
-									<div class="rf-left">
-										<p><i class="fa fa-user"></i> Allison Whaites </p> 
-									</div>
-									<div class="rf-right">
-										<!-- <p><i class="fa fa-clock-o"></i> 1 days ago</p> -->
-									</div>	
-								</div>
-							</div>
-							 <a href="http://www.fngrafton.com.au/real-estate/1238184/2-15-gosford-close-grafton-nsw-2460" class="room-price"> For Auction</a> 
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<!-- feature -->
-					<div class="feature-item">
-						<div class="feature-pic set-bg" data-setbg="img/feature/turf_street.jpg">
-							<div class="sale-notic">FOR SALE</div>
+							">  
+							<div class="rent-notic"><?php echo $row['status'];?></div>
 						</div>
 						<div class="feature-text">
 							<div class="text-center feature-title">
-								<h5>180 Turf Street</h5>
-								<p><i class="fa fa-map-marker"></i> Grafton NSW 2460 </p>
+								<h5><?php echo $row['address'];?></h5>
+								<p><i class="fa fa-map-marker"></i> <?php echo $row['city'];?> <?php echo $row['state'];?> <?php echo $row['postcode'];?></p>
 							</div>
 							<div class="room-info-warp">
 								<div class="room-info">
 									<div class="rf-left">
-										<!-- <p><i class="fa fa-th-large"></i> 1500 Square foot</p> -->
-										<p><i class="fa fa-bed"></i> 5 Bedrooms</p>
+										<p><i class="fa fa-bed"></i><?php echo $row['bedrooms'];?> Bedrooms </p>
 									</div>
 									<div class="rf-right">
-										<p><i class="fa fa-car"></i> 3 Garages</p>
-										<p><i class="fa fa-bath"></i> 2 Bathrooms</p>
+										<p><i class="fa fa-car"></i> <?php echo $row['garages'];?> Garages </p>
+										<p><i class="fa fa-bath"></i> <?php echo $row['barthrooms'];?> Bathrooms </p>
 									</div>	
 								</div>
 								<div class="room-info">
 									<div class="rf-left">
-									<p><i class="fa fa-user"></i> Allison Whaites</p> 
-									</div>
-									<div class="rf-right">
-										<!-- <p><i class="fa fa-clock-o"></i> 1 days ago</p> -->
+										<p><i class="fa fa-user"></i><?php echo $rowsr['frist_name'];?> <?php echo $rowsr['last_name'];?></p>
 									</div>	
 								</div>
 							</div>
-							<a href="http://www.fngrafton.com.au/real-estate/1179561/180-turf-street-grafton-nsw-2460" class="room-price">$375,000</a>
+							<a href="#" class="room-price"><?php echo $row['price'];?> </a>
 						</div>
 					</div>
 				</div>
 
+<?php } }else {echo "No properties found <br>"; } ?>
 
-			
-
-					<!-- feature -->
-					<!-- <div class="feature-item">
-						<div class="feature-pic set-bg" data-setbg="img/feature/4.jpg">
-							<div class="sale-notic">FOR SALE</div>
-						</div>
-						<div class="feature-text">
-							<div class="text-center feature-title">
-								<h5>28 Quaker Ridge Road, Manhasset</h5>
-								<p><i class="fa fa-map-marker"></i> 28 Quaker Ridge Road, Manhasset</p>
-							</div>
-							<div class="room-info-warp">
-								<div class="room-info">
-									<div class="rf-left">
-										<p><i class="fa fa-th-large"></i> 1200 Square foot</p>
-										<p><i class="fa fa-bed"></i> 12 Bedrooms</p>
-									</div>
-									<div class="rf-right">
-										<p><i class="fa fa-car"></i> 3 Garages</p>
-										<p><i class="fa fa-bath"></i> 8 Bathrooms</p>
-									</div>	
-								</div>
-								<div class="room-info">
-									<div class="rf-left">
-										<p><i class="fa fa-user"></i> Sasha Gordon </p>
-									</div>
-									<div class="rf-right">
-										<p><i class="fa fa-clock-o"></i> 8 days ago</p>
-									</div>	
-								</div>
-							</div>
-							<a href="#" class="room-price">$5,600,000</a>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-4 col-md-6"> -->
-					<!-- feature -->
-					<!-- <div class="feature-item">
-						<div class="feature-pic set-bg" data-setbg="img/feature/5.jpg">
-							<div class="rent-notic">FOR Rent</div>
-						</div>
-						<div class="feature-text">
-							<div class="text-center feature-title">
-								<h5>Sofi Berryessa 750 N King Road</h5>
-								<p><i class="fa fa-map-marker"></i> San Jose, CA 95133</p>
-							</div>
-							<div class="room-info-warp">
-								<div class="room-info">
-									<div class="rf-left">
-										<p><i class="fa fa-th-large"></i> 500 Square foot</p>
-										<p><i class="fa fa-bed"></i> 4 Bedrooms</p>
-									</div>
-									<div class="rf-right">
-										<p><i class="fa fa-car"></i> 1 Garages</p>
-										<p><i class="fa fa-bath"></i> 2 Bathrooms</p>
-									</div>	
-								</div>
-								<div class="room-info">
-									<div class="rf-left">
-										<p><i class="fa fa-user"></i> Gina Wesley</p>
-									</div>
-									<div class="rf-right">
-										<p><i class="fa fa-clock-o"></i> 8 days ago</p>
-									</div>	
-								</div>
-							</div>
-							<a href="#" class="room-price">$1,600/month</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6"> -->
-					<!-- feature -->
-					<!-- <div class="feature-item">
-						<div class="feature-pic set-bg" data-setbg="img/feature/6.jpg">
-							<div class="sale-notic">FOR SALE</div>
-						</div>
-						<div class="feature-text">
-							<div class="text-center feature-title">
-								<h5>1203 Orren Street, Northeast</h5>
-								<p><i class="fa fa-map-marker"></i> Washington, DC 20002</p>
-							</div>
-							<div class="room-info-warp">
-								<div class="room-info">
-									<div class="rf-left">
-										<p><i class="fa fa-th-large"></i> 700 Square foot</p>
-										<p><i class="fa fa-bed"></i> 7 Bedrooms</p>
-									</div>
-									<div class="rf-right">
-										<p><i class="fa fa-car"></i> 1 Garages</p>
-										<p><i class="fa fa-bath"></i> 7 Bathrooms</p>
-									</div>	
-								</div>
-								<div class="room-info">
-									<div class="rf-left">
-										<p><i class="fa fa-user"></i> Sasha Gordon </p>
-									</div>
-									<div class="rf-right">
-										<p><i class="fa fa-clock-o"></i> 8 days ago</p>
-									</div>	
-								</div>
-							</div>
-							<a href="#" class="room-price">$1,600,000</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-	</section>
+		    </div>
+		</div> 
+</section>		
 <!------------------- loop featured properties end ------------------->	
 	<div class="container">
 				<div class="section-title text-center">

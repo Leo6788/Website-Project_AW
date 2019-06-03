@@ -15,19 +15,33 @@ And follow the installtion guld also make sure you get the correct opertaing sys
 
 ### Installing
 Installing git bash local
+
 1.Download the most current version for your computers operating system. By clicking the name of your operating system.
+
 2. Then once the download is completed click run
+
 3. Once you click run an alert will pop up just click yes to continue the installation.
+
 4. Then follow the steps with next
+
 5.  Then you will need to select were the files are going to be stored then press next
+
 6. The default files are already selected but if you wish to add the extra ones simply click the box then click next.
+
 7. Select the default text editor for Git then click next
+
 8. Select the PATH environment then click next
+
 9. Select witch SSL/TLS library that you’re using for HTTPS Then click Next
+
 10. Select the default line ending conversion then click next to change click one of the other two options.
+
 11. Then select the terminal emulator you wish to user then click next
+
 12. Then configure the extra option then click next
+
 13. Then click Finish to finish the installation of git Bash/GIU
+
 
 To Fork a project follow these steps 
 1.	Once you’re in the project you wish to fork click the Fork icon in the top right hand corner.
@@ -40,7 +54,7 @@ To add to the project
 1.  Type $ git status into the command line
 2. If there red text Type $ git add .
 3. Then $ git commit –m “enter message here” to save the changes
-4. Type $ git Push http: the address link to the repositories you changing.com in the command line
+4. Type $ git Push https://github.com/Leo6788/Website-Project_AW.git in the command line
 
 
 
@@ -52,11 +66,7 @@ To add to the project
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+For details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 

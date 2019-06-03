@@ -16,7 +16,7 @@ And follow the installtion guld also make sure you get the correct opertaing sys
 ### Installing
 Installing git bash local
 
-1.Download the most current version for your computers operating system. By clicking the name of your operating system.
+1. Download the most current version for your computers operating system. By clicking the name of your operating system.
 
 2. Then once the download is completed click run
 
@@ -55,18 +55,6 @@ To add to the project
 2. If there red text Type $ git add .
 3. Then $ git commit –m “enter message here” to save the changes
 4. Type $ git Push https://github.com/Leo6788/Website-Project_AW.git in the command line
-
-
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-For details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
